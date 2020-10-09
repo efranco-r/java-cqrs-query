@@ -18,6 +18,7 @@ public final class ProductsGetController {
 
     @GetMapping("/products/{id}")
     public Optional<Product> search(@PathVariable String id) {
+        System.out.println("Id: ".concat(id));
         return this.search.search(id);
     }
 }

@@ -1,6 +1,8 @@
 package co.efranco.cqrs.catalog.product.domain;
 
-public final class Product {
+import java.io.Serializable;
+
+public final class Product implements Serializable {
     private final String id;
     private final String name;
     private final double price;
@@ -11,15 +13,15 @@ public final class Product {
         this.price = price;
     }
 
-    public String id() {
+    public String getId() {
         return id;
     }
 
-    public String name() {
+    public String getName() {
         return name;
     }
 
-    public double price() {
+    public double getPrice() {
         return price;
     }
 }

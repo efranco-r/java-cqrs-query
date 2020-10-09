@@ -7,12 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public final class ProductSearch implements ProductSearchService {
+public final class ProductSearch {
     private final ProductRepository repository;
 
     public ProductSearch(ProductRepository repository) { this.repository = repository; }
 
-    @Override
     public Optional<Product> search(final String id) {
             return this.repository.search(id);
     }
